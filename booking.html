@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claydee's Studio - Book Your Session</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner {
+            height: 150px;
+            width: 100%;
+            background-image: url('C:/Users/handf/OneDrive/Έγγραφα/THE CONSULTANT/CLAYDEE CAMP/STUDIO SITE/studio welcome.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .navbar {
+            background-color: #1a1a1a;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: #ff5e57;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            border: 2px solid #ff5e57;
+            border-radius: 5px;
+            background-color: #333;
+            margin: 0 10px;
+        }
+
+        .navbar a:hover {
+            color: #fff;
+            background-color: #ff5e57;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .booking-form {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .booking-form h1 {
+            color: #ff5e57;
+        }
+
+        .booking-form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .booking-form input[type="text"],
+        .booking-form input[type="email"],
+        .booking-form input[type="date"],
+        .booking-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            background-color: #333;
+            border: 1px solid #555;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #ff5e57;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button-container button:hover {
+            background-color: #ff856a;
+        }
+
+        .other-field {
+            display: none; /* Hidden by default */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="banner"></div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="studio-info.html">Studio Info</a>
+        <a href="who-we-are.html">Claydee</a>
+        <a href="latest-news.html">News</a>
+        <a href="services.html">Services</a>
+        <a href="rates.html">Rates</a>
+        <a href="location.html">Location</a>
+        
+        
+        
+    </div>
+
+    <!-- Booking Form Section -->
+    <div class="content">
+        <div class="booking-form">
+            <h1>Book Your Session</h1>
+            <form id="booking-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="session_from">Session Start Date:</label>
+                <input type="date" id="session_from" name="session_from" required>
+
+                <label for="session_to">Session End Date:</label>
+                <input type="date" id="session_to" name="session_to" required>
+
+                <label for="special_request">Special Requests:</label>
+                <textarea id="special_request" name="special_request" rows="4"></textarea>
+
+                <label>Select Services (choose one or more):</label>
+                <div>
+                    <label for="lyricist">Lyricist</label>
+                    <input type="checkbox" id="lyricist" name="services" value="Lyricist">
+                    
+                </div>
+                <div>
+                    <label for="instruments">Instruments</label>
+                    <input type="checkbox" id="instruments" name="services" value="Instruments">
+                    
+                </div>
+                <div>
+                    <label for="producer">Producer</label>
+                    <input type="checkbox" id="producer" name="services" value="Producer">
+                    
+                </div>
+                <div>
+                    <label for="artist">Artist</label>
+                    <input type="checkbox" id="artist" name="services" value="Artist">
+                    
+                </div>
+                <div>
+                    <label for="other">Other</label>
+                    <input type="checkbox" id="other" name="services" value="Other" onclick="toggleOtherField()">
+                    
+                </div>
+                <div class="other-field" id="other-field">
+                    <label for="other_description">Please specify:</label>
+                    <input type="text" id="other_description" name="other_description">
+                </div>
+
+                <div class="button-container">
+                    <button type="button" onclick="submitBooking()">Submit Booking Request</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleOtherField() {
+            const otherCheckbox = document.getElementById('other');
+            const otherField = document.getElementById('other-field');
+            otherField.style.display = otherCheckbox.checked ? 'block' : 'none';
+        }
+
+        function submitBooking() {
+            const form = document.getElementById('booking-form');
+            const formData = new FormData(form);
+            const bookingData = Object.fromEntries(formData.entries());
+
+            fetch('http://localhost:4000/api/bookings', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(bookingData),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert(`Booking request submitted successfully with ID: ${data.id}`);
+                    window.location.href = 'confirmation.html'; // Redirect to confirmation page
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Failed to submit booking request.');
+                });
+        }
+    </script>
+
+</body>
+
+</html>

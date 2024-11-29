@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claydee's Studio - About Claydee</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif; /* More newspaper-like font */
+            background-color: #000; /* Black background */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner {
+            height: 150px;
+            width: 100%;
+            background-image: url('C:/Users/handf/OneDrive/Έγγραφα/THE CONSULTANT/CLAYDEE CAMP/STUDIO SITE/studio welcome.webp'); /* Banner path */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .navbar {
+            background-color: #1a1a1a;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: #ff5e57;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            border: 2px solid #ff5e57;
+            border-radius: 5px;
+            background-color: #333;
+            margin: 0 10px;
+        }
+
+        .navbar a:hover {
+            color: #fff;
+            background-color: #ff5e57;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .bio {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .bio h1 {
+            color: #ff5e57;
+            font-size: 2em;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        .bio p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: 48%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .highlight-img {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .caption {
+            font-size: 0.9em;
+            color: #ccc;
+            text-align: center;
+            margin-top: -15px;
+            margin-bottom: 20px;
+        }
+
+        /* Newspaper-like typography */
+        .bio p:first-letter {
+            font-size: 2em;
+            font-weight: bold;
+            float: left;
+            padding-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="banner"></div>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <a href="studio-info.html">Studio Info</a>
+    <a href="latest-news.html">News</a>
+    <a href="booking.html">Book Session</a>
+    <a href="services.html">Services</a>
+    <a href="rates.html">Rates</a>
+    <a href="location.html">Location</a>    
+</div>
+
+<!-- Content Section -->
+<div class="content">
+    <div class="bio">
+        <h1>The Story of Claydee</h1>
+        
+        <!-- Image Layout: Flexbox for two images side by side -->
+        <div class="image-container">
+            <img src="Claydee Face.jpg" alt="Claydee Close-Up" />
+            <img src="Claydee Headphones.jpg" alt="Claydee with Headphones" />
+        </div>
+
+        <p>
+            Claydee Lupa, known mononymously as Claydee, is an internationally acclaimed music producer, songwriter, and performer.
+            Born in Albania and raised in Greece, Claydee has made an indelible mark in the global music scene with his 
+            unique blend of dance, pop, and house music, characterized by infectious rhythms and vibrant melodies.
+        </p>
+
+        <!-- Highlighted Image (centered) -->
+        <img class="highlight-img" src="CLaydee Red.jpg" alt="Claydee in Red Suit" />
+        <div class="caption">Claydee embracing his vibrant style in a bold red suit</div>
+
+        <p>
+            With an educational background in audio engineering and music production, Claydee's rise to fame began with 
+            his breakout single "Mamacita Buena," which garnered millions of streams worldwide. His ability to fuse 
+            Mediterranean influences with contemporary global sounds quickly made him a favorite in dance clubs across 
+            Europe and beyond.
+        </p>
+
+        <p>
+            Over the years, Claydee has collaborated with several renowned artists and has performed at major music festivals. 
+            Some of his most notable tracks include "Sexy Papi," "Te Quiero," and the viral hit "Alena." His work has earned him 
+            multiple awards, including accolades for best video, song of the year, and producer of the year in various European 
+            countries.
+        </p>
+
+        <!-- Another image layout -->
+        <div class="image-container">
+            <img src="Claydee Live.jpg" alt="Claydee Performing Live" />
+            <img src="Claydee.jpeg" alt="Claydee in a White Suit" />
+        </div>
+
+        <p>
+            Apart from his solo work, Claydee is also a member of the dynamic duo Bang La Decks, whose tracks have topped the 
+            charts across numerous countries. His versatility as a producer allows him to work across multiple genres, bringing 
+            fresh, innovative sounds to every project. Today, Claydee continues to be a dominant force in the music industry, 
+            blending cultures and sounds to create music that resonates with people from all walks of life.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
