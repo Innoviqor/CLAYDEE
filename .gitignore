@@ -1,0 +1,8 @@
+node_modules/
+*.env
+SQLITE/
+*.db
+*.xlsx
+BACKUP FILES/
+admin*.html
+automated_email.html
