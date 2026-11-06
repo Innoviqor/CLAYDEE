@@ -217,6 +217,10 @@ footer .logo { color: var(--cream); }
 .social a { text-decoration: none; font-weight: 600; }
 .social a:hover { color: var(--cream); }
 
+.powered { grid-column: 1 / -1; margin: 6px 0 0; padding-top: 16px; border-top: 1px solid var(--line); font-size: .85rem; }
+.powered a { font-weight: 700; color: var(--cream); text-decoration: none; }
+.powered a:hover { color: var(--pink); }
+
 /* Mobile booking dock */
 .dock {
   position: fixed; left: 12px; right: 12px; bottom: max(12px, env(safe-area-inset-bottom));
