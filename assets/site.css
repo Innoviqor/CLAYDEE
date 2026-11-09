@@ -168,6 +168,13 @@ section { padding: 72px 0; }
 .rate .d { grid-column: 1 / -1; color: var(--muted); font-size: .92rem; }
 .rate.hl .n, .rate.hl .p { color: var(--pink); }
 
+.quote { background: var(--plum-2); border-radius: 24px; padding: 26px 22px; align-self: start; }
+.quote h3 { font: 800 1.6rem/1 var(--display); margin: 0 0 10px; letter-spacing: -0.02em; }
+.quote p { color: var(--muted); margin: 0 0 20px; max-width: 46ch; }
+.quote-cta { display: grid; gap: 10px; }
+@media (min-width: 560px) { .quote-cta { display: flex; flex-wrap: wrap; } }
+@media (min-width: 900px) { .quote { padding: 36px; position: sticky; top: calc(var(--bar) + 24px); } }
+
 /* Booking */
 .book-card { background: var(--cream); color: var(--night); border-radius: 28px; padding: 26px 20px; }
 .book-card .sec-head p { color: #5b4a5e; }
