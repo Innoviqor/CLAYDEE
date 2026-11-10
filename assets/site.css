@@ -306,3 +306,19 @@ footer .logo { color: var(--cream); }
   .eq i { animation: none; height: 60%; }
   .dock { transition: none; }
 }
+
+/* Listen buttons and song links */
+.listen-row { display: grid; gap: 10px; margin: 0 0 28px; }
+.listen-row .btn svg { width: 20px; height: 20px; }
+.art-img { margin: 0 0 32px; border-radius: 24px; overflow: hidden; max-width: 760px; }
+.art-img img { width: 100%; max-height: 520px; object-fit: cover; object-position: 50% 25%; }
+.ico-links { display: inline-flex; gap: 6px; flex: none; }
+.ico { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 999px; color: var(--muted); box-shadow: inset 0 0 0 1.5px var(--line); text-decoration: none; }
+.ico:hover { color: var(--ink); background: var(--plat-sheen); box-shadow: none; }
+.ico svg { width: 18px; height: 18px; }
+.rel-list li { align-items: center; }
+.rel-list .rel-meta { display: flex; align-items: center; gap: 12px; }
+.credit figcaption .ico-links { margin-top: 8px; display: flex; }
+.song-link { color: var(--cream); text-decoration-color: rgba(238,240,244,.35); text-underline-offset: 3px; }
+.song-link:hover { text-decoration-color: var(--cream); }
+@media (min-width: 560px) { .listen-row { display: flex; flex-wrap: wrap; } }
