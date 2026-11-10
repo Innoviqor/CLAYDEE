@@ -332,3 +332,15 @@ footer .logo { color: var(--cream); }
 .reach-list b { display: block; font-weight: 700; }
 .reach-list span { color: var(--muted); font-size: .92rem; line-height: 1.35; }
 @media (min-width: 900px) { .reach { padding: 28px; } }
+
+/* Credits list (Writing for others) */
+.credit-list { list-style: none; margin: 0 0 1.6em; padding: 0; }
+.credit-row { display: grid; grid-template-columns: 3.2rem 1fr auto; gap: 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.cr-yr { font-weight: 700; color: var(--amber); font-variant-numeric: tabular-nums; font-size: .95rem; }
+.cr-main b { display: block; font-weight: 700; font-size: 1.05rem; line-height: 1.25; }
+.cr-artist { display: block; color: var(--cream); font-size: .95rem; }
+.cr-note { display: block; color: var(--muted); font-size: .9rem; line-height: 1.4; margin-top: 2px; }
+.tile-img { display: block; border-radius: 16px; overflow: hidden; }
+.tile-img img { transition: transform .3s ease; }
+.tile-img:hover img { transform: scale(1.03); }
+@media (prefers-reduced-motion: reduce) { .tile-img img { transition: none; } }
