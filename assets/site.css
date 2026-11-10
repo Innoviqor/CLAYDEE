@@ -322,3 +322,13 @@ footer .logo { color: var(--cream); }
 .song-link { color: var(--cream); text-decoration-color: rgba(238,240,244,.35); text-underline-offset: 3px; }
 .song-link:hover { text-decoration-color: var(--cream); }
 @media (min-width: 560px) { .listen-row { display: flex; flex-wrap: wrap; } }
+
+/* Combined reach */
+.reach { margin: 32px 0 0; padding: 24px 20px; border-radius: 20px; background: var(--plum); }
+.reach-num { margin: 0; font: 800 clamp(3rem, 15vw, 5rem)/0.95 var(--display); letter-spacing: -0.04em; background: var(--plat-sheen); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.reach-label { margin: 10px 0 18px; color: var(--muted); max-width: 40ch; }
+.reach-list { list-style: none; margin: 0; padding: 0; }
+.reach-list li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 0; border-top: 1px solid var(--line); }
+.reach-list b { display: block; font-weight: 700; }
+.reach-list span { color: var(--muted); font-size: .92rem; line-height: 1.35; }
+@media (min-width: 900px) { .reach { padding: 28px; } }
