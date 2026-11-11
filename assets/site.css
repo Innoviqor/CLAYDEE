@@ -386,3 +386,15 @@ footer .logo { color: var(--cream); }
   .fl { animation: none; }
   .fl-cover, .fl-cover img { transition: none; }
 }
+
+/* More stories (article footers) */
+.more-stories { margin: 56px 0 0; padding-top: 28px; border-top: 1px solid var(--line); }
+.more-stories h2 { font: 800 1.5rem/1.1 var(--display); letter-spacing: -0.02em; margin: 0 0 16px; }
+.more-stories ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.more-stories a { display: grid; gap: 2px; padding: 16px 18px; border-radius: 16px; background: var(--plum); text-decoration: none; min-height: 44px; }
+.more-stories a:hover { background: var(--plum-2); }
+.more-stories b { font-weight: 700; }
+.more-stories span { color: var(--muted); font-size: .92rem; }
+@media (min-width: 700px) { .more-stories ul { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .more-stories ul { grid-template-columns: repeat(3, 1fr); } }
+.local-el { color: var(--muted); font-size: .88rem; line-height: 1.5; max-width: 70ch; margin: 0; }
