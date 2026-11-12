@@ -408,3 +408,6 @@ footer .logo { color: var(--cream); }
 .also-text .listen-row { margin: 0; }
 @media (min-width: 640px) { .also-card { grid-template-columns: 220px 1fr; gap: 32px; padding: 28px; } .also-cover { width: 100%; } }
 @media (prefers-reduced-motion: reduce) { .also-cover { transition: none; } }
+
+.art-img.art-square { max-width: 360px; }
+.art-img.art-square img { aspect-ratio: 1; max-height: none; }
