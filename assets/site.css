@@ -398,3 +398,13 @@ footer .logo { color: var(--cream); }
 @media (min-width: 700px) { .more-stories ul { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1000px) { .more-stories ul { grid-template-columns: repeat(3, 1fr); } }
 .local-el { color: var(--muted); font-size: .88rem; line-height: 1.5; max-width: 70ch; margin: 0; }
+
+/* Related record card (article pages) */
+.also-card { display: grid; gap: 22px; align-items: center; margin: 8px 0 1.6em; padding: 22px; border-radius: 22px; background: var(--plum); }
+.also-cover { display: block; width: min(220px, 70%); border-radius: 12px; transform: rotate(-3deg); transition: transform .35s ease; }
+.also-cover img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 12px; box-shadow: 0 24px 40px -12px rgba(0,0,0,.75), 0 0 0 1px rgba(238,240,244,.1); }
+.also-cover:hover, .also-cover:focus-visible { transform: rotate(0deg) scale(1.04); }
+.also-text p { margin: 0 0 16px; }
+.also-text .listen-row { margin: 0; }
+@media (min-width: 640px) { .also-card { grid-template-columns: 220px 1fr; gap: 32px; padding: 28px; } .also-cover { width: 100%; } }
+@media (prefers-reduced-motion: reduce) { .also-cover { transition: none; } }
